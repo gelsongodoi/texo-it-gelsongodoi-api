@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../EcommerceSpringBoot/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/desafio-bluesoft-felipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../desafio-bluesoft/desafio-pedidos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/mini-autorizador.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/TexoItMovieApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/AwardIntervalDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieProducersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ErrorField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/GlobalHandlerException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/NonExistentRecordException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ResponseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/model/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/repository/MovieRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/appication.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/files/movielist.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/movielist.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/MyConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/VendasApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/domain/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/domain/entity/Ordered.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/domain/entity/OrderedItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/domain/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/model/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/repository/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vendas/src/main/resources/data.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2cbbEHlLC6eCeGv06Y208POfzaV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TexoItMovieApplication.executor": "Run",
+    "Application.TexoItWorstMovieApplication.executor": "Run",
+    "Docker.template.yaml: Compose Deployment.executor": "Run",
+    "JUnit.WorstMovie.executor": "Coverage",
+    "JUnit.WorstMovieControllerTest.executor": "Coverage",
+    "JUnit.WorstMovieControllerTest.returnWorstMovie.executor": "Run",
+    "JUnit.WorstMovieTest.executor": "Coverage",
+    "JUnit.WorstMovieTest.registerMovie.executor": "Coverage",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.idesettings.quicklists"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources" />
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\java\br\com\texoit\worst\movie\exception" />
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources\files" />
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api" />
+      <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TexoItMovieApplication">
+    <configuration name="TexoItMovieApplication" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.TexoItMovieApplication" />
+      <module name="texo-it-movie-api" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorstMovieControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.worst.movie.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.controller.WorstMovieControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorstMovieControllerTest.returnWorstMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.worst.movie.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie.controller" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.controller.WorstMovieControllerTest" />
+      <option name="METHOD_NAME" value="returnWorstMovie" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorstMovieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.worst.movie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.WorstMovieTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WorstMovieTest.registerMovie" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.worst.movie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.WorstMovieTest" />
+      <option name="METHOD_NAME" value="registerMovie" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="template.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="template.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.TexoItMovieApplication" />
+      <item itemvalue="Docker.template.yaml: Compose Deployment" />
+      <item itemvalue="JUnit.WorstMovieTest.registerMovie" />
+      <item itemvalue="JUnit.WorstMovieControllerTest" />
+      <item itemvalue="JUnit.WorstMovieControllerTest.returnWorstMovie" />
+      <item itemvalue="JUnit.WorstMovieTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.template.yaml: Compose Deployment" />
+        <item itemvalue="JUnit.WorstMovieTest" />
+        <item itemvalue="JUnit.WorstMovieControllerTest.returnWorstMovie" />
+        <item itemvalue="JUnit.WorstMovieControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-8336523bb0d9-93b19daf" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="" />
+      <created>1708383117344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708383117344</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="28" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="previousAward" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$TexoItWorstMovieApplication.ic" NAME="TexoItWorstMovieApplication Coverage Results" MODIFIED="1708705086850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$TexoItMovieApplication.ic" NAME="TexoItMovieApplication Coverage Results" MODIFIED="1724767701009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$WorstMovie.ic" NAME="WorstMovieTest Coverage Results" MODIFIED="1708701818448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.texoit.worst.movie.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$WorstMovieControllerTest.ic" NAME="WorstMovieControllerTest Coverage Results" MODIFIED="1708704520814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.texoit.worst.movie.controller.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$WorstMovieTest_registerMovie.ic" NAME="WorstMovieTest.registerMovie Coverage Results" MODIFIED="1708701843356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.texoit.worst.movie.*</FILTER>
+    </SUITE>
+  </component>
+</project>
