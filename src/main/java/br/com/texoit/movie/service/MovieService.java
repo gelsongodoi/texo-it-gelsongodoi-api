@@ -1,9 +1,6 @@
 package br.com.texoit.movie.service;
 
-import br.com.texoit.movie.dto.AwardIntervalDto;
-import br.com.texoit.movie.dto.MovieProducersDto;
 import br.com.texoit.movie.dto.MovieRequestDto;
-import br.com.texoit.movie.dto.MovieResponseDto;
 import br.com.texoit.movie.model.Movie;
 import br.com.texoit.movie.repository.MovieRepository;
 import br.com.texoit.movie.util.MovieCSVLoader;
@@ -49,68 +46,90 @@ public class MovieService {
         return awards;
     }
 
-    public List<AwardIntervalDto> getProducersInterval() {
+    public Map<String, List<Map<String, Object>>> getProducersInterval() {
         if (movieRepository.count() == 0){
             loadCSV();
         }
-        List<Movie> awards = findByWinner("yes");
+        List<Movie> movies = movieRepository.findAll();
+        Map<String, List<Integer>> producerYearsMap = new HashMap<>();
 
-        List<MovieResponseDto> producersWithLesserInterval = new ArrayList<>();
-        List<MovieResponseDto> producersWithLargestInterval = new ArrayList<>();
-        List<MovieProducersDto> previousAward = new ArrayList<>();
-        List<MovieProducersDto> producers = new ArrayList<>();
+        // Organizar anos por produtor
+        for (Movie movie : movies) {
+            producerYearsMap
+                    .computeIfAbsent(movie.getProducer(), k -> new ArrayList<>())
+                    .add(movie.getYearMovie());
+        }
 
-        for (int i = 1; i < awards.size(); i++) {
-            String producer = awards.get(i).getProducer();
-            String[] p = producer.split(" and |, and |, ");
-            int j = 0;
-            for (String s : p) {
-                producers.add(j, new MovieProducersDto(s, awards.get(i).getYearMovie()));
-                j++;
-            }
+        List<Map<String, Object>> minProducers = new ArrayList<>();
+        List<Map<String, Object>> maxProducers = new ArrayList<>();
 
-            //WorstMovie previousAward = awards.get(i);
-            previousAward.add(new MovieProducersDto(awards.get(i -1).getProducer(), awards.get(i -1).getYearMovie()));
+        int minInterval = Integer.MAX_VALUE;
+        int maxInterval = 0;
 
-            /*for (int k = 0; k < awards.size(); k++) {
-                //WorstMovie compareAward = awards.get(k);
-                compareAward.add(new WorstMovieProducersDto(producers.get(i).getNameProducer(), producers.get(i).getYearMovie()));
-                if (previousAward.get(i -1).getNameProducer().equals(compareAward.get(k +1).getNameProducer())) {
-                    producersWithLesserInterval.add(new WorstMovieResponseDto(
-                            previousAward.get(i -1).getNameProducer(),
-                            previousAward.get(i -1).getYearMovie()
-                    ));
-                    long interval = compareAward.get(i -1).getYearMovie() - previousAward.get(k +1).getYearMovie();
- *//*                   if (previousAward.isEmpty() || interval < previousAward.get(0).getInterval()) {
-                        previousAward.clear();
-                        previousAward.add(new WorstMovieResponseDto(
-                                previousAward.getProducer(),
-                                interval,
-                                previousAward.getYearMovie(),
-                                compareAward.getYearMovie()
-                        ));
-                    }
-                    if (producersWithLargestInterval.isEmpty() || interval > producersWithLargestInterval.get(0).getInterval()) {
-                        producersWithLargestInterval.clear();
-                        producersWithLargestInterval.add(new WorstMovieResponseDto(
-                                previousAward.getProducer(),
-                                interval,
-                                previousAward.getYearMovie(),
-                                compareAward.getYearMovie()
-                        ));
-                    }*//*
+        // Calcular os intervalos
+        for (Map.Entry<String, List<Integer>> entry : producerYearsMap.entrySet()) {
+            String producer = entry.getKey();
+            List<Integer> years = entry.getValue();
+            Collections.sort(years); // Garantir que os anos estejam em ordem
+
+            if (years.size() < 2) continue; // Precisamos de pelo menos 2 prêmios para calcular o intervalo
+
+            int previousYear = years.get(0);
+            int producerMinInterval = Integer.MAX_VALUE;
+            int producerMaxInterval = Integer.MIN_VALUE;
+            int firstWinYear = years.get(0);
+            int secondWinYear = years.get(1);
+            int producerFastestInterval = secondWinYear - firstWinYear;
+
+            for (int i = 1; i < years.size(); i++) {
+                int currentYear = years.get(i);
+                int interval = currentYear - previousYear;
+
+                // Atualizar intervalo máximo
+                if (interval > producerMaxInterval) {
+                    producerMaxInterval = interval;
                 }
 
-            }*/
+                // Atualizar intervalo mínimo
+                if (interval < producerMinInterval) {
+                    producerMinInterval = interval;
+                }
+
+                previousYear = currentYear;
+            }
+
+            // Atualizar a lista de produtores com a lógica mínima
+            if (producerMinInterval < minInterval) {
+                minInterval = producerMinInterval;
+                minProducers.clear();
+                minProducers.add(createProducerMap(producer, producerMinInterval, firstWinYear, firstWinYear + producerMinInterval));
+            } else if (producerMinInterval == minInterval) {
+                minProducers.add(createProducerMap(producer, producerMinInterval, firstWinYear, firstWinYear + producerMinInterval));
+            }
+
+            // Atualizar a lista de produtores com a lógica máxima
+            if (producerMaxInterval > maxInterval) {
+                maxInterval = producerMaxInterval;
+                maxProducers.clear();
+                maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
+            } else if (producerMaxInterval == maxInterval) {
+                maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
+            }
         }
 
-        for (MovieProducersDto producer : producers) {
-            System.out.println(producer.getNameProducer() + " " + producer.getYearMovie());
-        }
+        // Montar o resultado final
+        Map<String, List<Map<String, Object>>> result = new HashMap<>();
+        result.put("min", minProducers);
+        result.put("max", maxProducers);
+        return result;
+    }
 
-        for (MovieProducersDto producer : previousAward) {
-            System.out.println("previous: " + producer.getNameProducer() + " - " + producer.getYearMovie());
-        }
-        return Collections.singletonList(new AwardIntervalDto(producersWithLesserInterval, producersWithLargestInterval));
+    private Map<String, Object> createProducerMap(String producer, int interval, int previousWin, int followingWin) {
+        Map<String, Object> producerMap = new HashMap<>();
+        producerMap.put("producer", producer);
+        producerMap.put("interval", interval);
+        producerMap.put("previousWin", previousWin);
+        producerMap.put("followingWin", followingWin);
+        return producerMap;
     }
 }
