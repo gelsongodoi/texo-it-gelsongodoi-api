@@ -6,7 +6,7 @@
 2. Navegue até a pasta do projeto.
 3. Compile o projeto com o comando `mvn clean install`.
 4. Execute a aplicação: `mvn spring-boot:run`.
-5. Acesse a API em `http://localhost:8080/api/producers-interval`.
+5. Acesse a API em `http://localhost:8080/api/movies`.
 
 ## Testes de Integração
 
