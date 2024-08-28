@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="ajuste da url">
+    <list default="true" id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="ajuste na regra dos vencedores">
       <change afterPath="$PROJECT_DIR$/../EcommerceSpringBoot/.idea/aws.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/aws.xml" afterDir="false" />
@@ -25,6 +25,7 @@
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logback-spring.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/jarRepositories.xml" afterDir="false" />
@@ -47,8 +48,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/AwardIntervalDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/appication.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/appication.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724782592225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajuste na regra dos vencedores">
+      <option name="closed" value="true" />
+      <created>1724866767374</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724866767374</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -282,7 +291,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="ajuste da url" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajuste da url" />
+    <MESSAGE value="ajuste na regra dos vencedores" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste na regra dos vencedores" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -291,16 +301,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="28" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java</url>
-          <line>242</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java</url>
-          <line>147</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

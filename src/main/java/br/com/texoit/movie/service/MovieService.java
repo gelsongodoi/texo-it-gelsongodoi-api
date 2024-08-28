@@ -1,6 +1,7 @@
 package br.com.texoit.movie.service;
 
 import br.com.texoit.movie.dto.*;
+import br.com.texoit.movie.exception.NonExistentRecordException;
 import br.com.texoit.movie.model.Movie;
 import br.com.texoit.movie.repository.MovieRepository;
 import br.com.texoit.movie.util.MovieCSVLoader;
@@ -37,6 +38,9 @@ public class MovieService {
             loadCSV();
         }
         List<Movie> movies = movieRepository.findByYearMovieAndWinner(year, "yes");
+        if (movies.isEmpty())
+            throw new NonExistentRecordException("Não há dados a exibir com esta informação: ano " + year);
+
         List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
         return movieResponseDtos;
     }
