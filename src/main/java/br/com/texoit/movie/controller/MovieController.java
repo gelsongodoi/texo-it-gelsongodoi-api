@@ -1,6 +1,6 @@
 package br.com.texoit.movie.controller;
 
-import br.com.texoit.movie.model.Movie;
+import br.com.texoit.movie.dto.MovieResponseDto;
 import br.com.texoit.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,8 +20,8 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping("/findAll")
-    public ResponseEntity<List<Movie>> findAll() {
-        List<Movie> movies = movieService.findAll();
+    public ResponseEntity<List<MovieResponseDto>> findAll() {
+        List<MovieResponseDto> movies = movieService.findAll();
         return ResponseEntity.ok(movies);
     }
 
@@ -31,14 +31,14 @@ public class MovieController {
     }
 
     @GetMapping("/findByYear")
-    public ResponseEntity<List<Movie>> findByYear(@RequestParam int year) {
-        List<Movie> movies = movieService.findByYear(year);
+    public ResponseEntity<List<MovieResponseDto>> findByYear(@RequestParam int year) {
+        List<MovieResponseDto> movies = movieService.findByYear(year);
         return ResponseEntity.ok(movies);
     }
 
     @GetMapping("/findByWinner")
-    public ResponseEntity<List<Movie>> findByWinner() {
-        List<Movie> movies = movieService.findByWinner("yes");
+    public ResponseEntity<List<MovieResponseDto>> findByWinner() {
+        List<MovieResponseDto> movies = movieService.findByWinner("yes");
         return ResponseEntity.ok(movies);
     }
 

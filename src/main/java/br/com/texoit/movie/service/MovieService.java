@@ -1,6 +1,6 @@
 package br.com.texoit.movie.service;
 
-import br.com.texoit.movie.dto.MovieRequestDto;
+import br.com.texoit.movie.dto.*;
 import br.com.texoit.movie.model.Movie;
 import br.com.texoit.movie.repository.MovieRepository;
 import br.com.texoit.movie.util.MovieCSVLoader;
@@ -23,41 +23,49 @@ public class MovieService {
         }
     }
 
-    public List<Movie> findAll() {
+    public List<MovieResponseDto> findAll() {
         if (movieRepository.count() == 0){
             loadCSV();
         }
-        return movieRepository.findAll();
+        List<Movie> movies = movieRepository.findAll();
+        List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
+        return movieResponseDtos;
     }
 
-    public List<Movie> findByYear(int year) {
+    public List<MovieResponseDto> findByYear(int year) {
         if (movieRepository.count() == 0){
             loadCSV();
         }
-        List<Movie> awards = movieRepository.findByYearMovieAndWinner(year, "yes");
-        return awards;
+        List<Movie> movies = movieRepository.findByYearMovieAndWinner(year, "yes");
+        List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
+        return movieResponseDtos;
     }
 
-    public List<Movie> findByWinner(String winner) {
+    public List<MovieResponseDto> findByWinner(String winner) {
         if (movieRepository.count() == 0){
             loadCSV();
         }
-        List<Movie> awards = movieRepository.findByWinner(winner);
-        return awards;
+        List<Movie> movies = movieRepository.findByWinner(winner);
+        List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
+        return movieResponseDtos;
     }
 
     public Map<String, List<Map<String, Object>>> getProducersInterval() {
         if (movieRepository.count() == 0){
             loadCSV();
         }
-        List<Movie> movies = movieRepository.findAll();
+        List<Movie> movies = movieRepository.findByWinner("yes");
         Map<String, List<Integer>> producerYearsMap = new HashMap<>();
 
-        // Organizar anos por produtor
+        // Organizar anos por produtor (separando por ',' e 'and')
         for (Movie movie : movies) {
-            producerYearsMap
-                    .computeIfAbsent(movie.getProducer(), k -> new ArrayList<>())
-                    .add(movie.getYearMovie());
+            String[] producers = movie.getProducer().split(" and |, and |, ");
+            for (String producer : producers) {
+                producer = producer.trim();
+                producerYearsMap
+                        .computeIfAbsent(producer, k -> new ArrayList<>())
+                        .add(movie.getYearMovie());
+            }
         }
 
         List<Map<String, Object>> minProducers = new ArrayList<>();
@@ -132,4 +140,5 @@ public class MovieService {
         producerMap.put("followingWin", followingWin);
         return producerMap;
     }
+
 }
