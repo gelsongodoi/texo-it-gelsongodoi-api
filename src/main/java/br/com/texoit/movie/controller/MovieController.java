@@ -1,6 +1,7 @@
 package br.com.texoit.movie.controller;
 
 import br.com.texoit.movie.dto.MovieResponseDto;
+import br.com.texoit.movie.exception.ResourceNotFoundException;
 import br.com.texoit.movie.service.MovieService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;

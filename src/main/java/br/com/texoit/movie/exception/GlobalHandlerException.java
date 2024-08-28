@@ -13,25 +13,15 @@ import java.util.List;
 @ControllerAdvice
 public class GlobalHandlerException {
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity handlerMethodArgumentNotValidException(MethodArgumentNotValidException e) {
-        BindingResult result = e.getBindingResult();
-        List<org.springframework.validation.FieldError> fieldErrors = result.getFieldErrors();
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorField> handleResourceNotFoundException(ResourceNotFoundException ex) {
+        ErrorField errorResponse = new ErrorField(HttpStatus.NOT_FOUND.value(), ex.getMessage());
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    }
 
-        List<ErrorField> errorFields = new ArrayList<>();
-
-        for (org.springframework.validation.FieldError fieldError : fieldErrors) {
-            ErrorField errorField = new ErrorField(fieldError.getField(), fieldError.getDefaultMessage());
-            errorFields.add(errorField);
-        }
-
-        ResponseException responseException = new ResponseException(HttpStatus.BAD_REQUEST.value(),
-                HttpStatus.BAD_REQUEST.getReasonPhrase(),
-                e.getMessage(),
-                errorFields);
-
-        return ResponseEntity
-                .status(HttpStatus.BAD_REQUEST)
-                .body(responseException);
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorField> handleGlobalException(Exception ex) {
+        ErrorField errorResponse = new ErrorField(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An unexpected error occurred");
+        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

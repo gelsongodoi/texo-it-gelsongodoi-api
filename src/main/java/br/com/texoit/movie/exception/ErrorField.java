@@ -1,22 +1,21 @@
 package br.com.texoit.movie.exception;
 
+import lombok.Getter;
+
+import java.time.LocalDateTime;
+
+@Getter
 public class ErrorField {
-    private String field;
+    private int status;
     private String message;
+    private LocalDateTime datetime;
 
     public ErrorField() {
     }
 
-    public ErrorField(String field, String message) {
-        this.field = field;
+    public ErrorField(int status, String message) {
+        this.status = status;
         this.message = message;
-    }
-
-    public String getField() {
-        return field;
-    }
-
-    public String getMessage() {
-        return message;
+        this.datetime = LocalDateTime.now();
     }
 }

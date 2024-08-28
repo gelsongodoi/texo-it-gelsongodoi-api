@@ -26,10 +26,6 @@ public class MovieCSVLoader {
 
         List<MovieRequestDto> movieRequestDtos = new ArrayList<>();
 
-        if (movieListPath == null){
-            log.warn("error ************************************************ ");
-        }
-
         String csvFile = movieListPath;
         String line = "";
         String cvsSplitBy = ";";

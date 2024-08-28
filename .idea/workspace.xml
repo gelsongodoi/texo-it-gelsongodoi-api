@@ -26,6 +26,8 @@
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/texoit/movie/service/MovieServiceTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/jarRepositories.xml" afterDir="false" />
@@ -46,10 +48,16 @@
       <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/repository/Customers.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/AwardIntervalDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ErrorField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ErrorField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/GlobalHandlerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/GlobalHandlerException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/NonExistentRecordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ResponseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/appication.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/appication.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +71,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -90,6 +99,16 @@
     "Application.TexoItMovieApplication.executor": "Run",
     "Application.TexoItWorstMovieApplication.executor": "Run",
     "Docker.template.yaml: Compose Deployment.executor": "Run",
+    "JUnit.MovieServiceTest.executor": "Run",
+    "JUnit.MovieServiceTest.getProducersMaxAndMinInterval.executor": "Run",
+    "JUnit.MovieServiceTest.testFindAllWhenEmpty.executor": "Run",
+    "JUnit.MovieServiceTest.testFindAllWhenNotEmpty.executor": "Run",
+    "JUnit.MovieServiceTest.testFindByYearWithExistingMovies.executor": "Run",
+    "JUnit.MovieServiceTest.testFindByYearWithNoMovies.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval_MultipleProducers.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval_SingleProducerMultipleWins.executor": "Debug",
+    "JUnit.MovieServiceTest.testLoadCSV.executor": "Run",
     "JUnit.WorstMovie.executor": "Coverage",
     "JUnit.WorstMovieControllerTest.executor": "Coverage",
     "JUnit.WorstMovieControllerTest.returnWorstMovie.executor": "Run",
@@ -99,16 +118,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.idesettings.quicklists"
+    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.texoit.movie.exception" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources" />
       <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\java\br\com\texoit\worst\movie\exception" />
@@ -119,8 +143,15 @@
       <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api" />
       <recent name="D:\TMP\Projetos\texo-it-gelsongodoi-api\src\main\resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="br.com.texoit.movie.service" />
+      <recent name="br.com.texoit.movie.repository" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.TexoItMovieApplication">
+  <component name="RunManager" selected="JUnit.MovieServiceTest.testGetProducersInterval">
     <configuration name="TexoItMovieApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.TexoItMovieApplication" />
       <module name="texo-it-movie-api" />
@@ -133,48 +164,81 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorstMovieControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="texo-it-movie-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.texoit.worst.movie.controller.*" />
+          <option name="PATTERN" value="br.com.texoit.movie.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie.controller" />
-      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.controller.WorstMovieControllerTest" />
+      <option name="PACKAGE_NAME" value="br.com.texoit.movie.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.service.MovieServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorstMovieControllerTest.returnWorstMovie" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieServiceTest.testFindAllWhenEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="texo-it-movie-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.texoit.worst.movie.controller.*" />
+          <option name="PATTERN" value="br.com.texoit.movie.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie.controller" />
-      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.controller.WorstMovieControllerTest" />
-      <option name="METHOD_NAME" value="returnWorstMovie" />
+      <option name="PACKAGE_NAME" value="br.com.texoit.movie.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.service.MovieServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllWhenEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WorstMovieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovieServiceTest.testFindAllWhenNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="texo-it-movie-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.com.texoit.worst.movie.*" />
+          <option name="PATTERN" value="br.com.texoit.movie.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="br.com.texoit.worst.movie" />
-      <option name="MAIN_CLASS_NAME" value="br.com.texoit.worst.movie.WorstMovieTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="br.com.texoit.movie.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.service.MovieServiceTest" />
+      <option name="METHOD_NAME" value="testFindAllWhenNotEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieServiceTest.testFindByYearWithNoMovies" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.movie.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.movie.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.service.MovieServiceTest" />
+      <option name="METHOD_NAME" value="testFindByYearWithNoMovies" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieServiceTest.testGetProducersInterval" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="texo-it-movie-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.texoit.movie.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.texoit.movie.service" />
+      <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.service.MovieServiceTest" />
+      <option name="METHOD_NAME" value="testGetProducersInterval" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,28 +265,22 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="template.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="template.yaml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.TexoItMovieApplication" />
-      <item itemvalue="Docker.template.yaml: Compose Deployment" />
       <item itemvalue="JUnit.WorstMovieTest.registerMovie" />
-      <item itemvalue="JUnit.WorstMovieControllerTest" />
-      <item itemvalue="JUnit.WorstMovieControllerTest.returnWorstMovie" />
-      <item itemvalue="JUnit.WorstMovieTest" />
+      <item itemvalue="JUnit.MovieServiceTest" />
+      <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenEmpty" />
+      <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenNotEmpty" />
+      <item itemvalue="JUnit.MovieServiceTest.testFindByYearWithNoMovies" />
+      <item itemvalue="JUnit.MovieServiceTest.testGetProducersInterval" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.template.yaml: Compose Deployment" />
-        <item itemvalue="JUnit.WorstMovieTest" />
-        <item itemvalue="JUnit.WorstMovieControllerTest.returnWorstMovie" />
-        <item itemvalue="JUnit.WorstMovieControllerTest" />
+        <item itemvalue="JUnit.MovieServiceTest.testGetProducersInterval" />
+        <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenNotEmpty" />
+        <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenEmpty" />
+        <item itemvalue="JUnit.MovieServiceTest" />
+        <item itemvalue="JUnit.MovieServiceTest.testFindByYearWithNoMovies" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724866767374</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ajuste na regra dos vencedores">
+      <option name="closed" value="true" />
+      <created>1724876411279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724876411279</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -320,6 +386,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$WorstMovieTest_registerMovie.ic" NAME="WorstMovieTest.registerMovie Coverage Results" MODIFIED="1708701843356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>br.com.texoit.worst.movie.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/texo_it_gelsongodoi_api$MovieServiceTest.ic" NAME="MovieServiceTest Coverage Results" MODIFIED="1724879808660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.texoit.movie.service.*</FILTER>
     </SUITE>
   </component>
 </project>
