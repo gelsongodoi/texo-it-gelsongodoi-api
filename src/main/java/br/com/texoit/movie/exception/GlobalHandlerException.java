@@ -21,7 +21,7 @@ public class GlobalHandlerException {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorField> handleGlobalException(Exception ex) {
-        ErrorField errorResponse = new ErrorField(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An unexpected error occurred");
+        ErrorField errorResponse = new ErrorField(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Não foi possível encontrar o arquivo com os dados de entrada");
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
