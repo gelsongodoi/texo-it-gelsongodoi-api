@@ -1,7 +1,6 @@
 package br.com.texoit.movie.util;
 
 import br.com.texoit.movie.dto.MovieRequestDto;
-import br.com.texoit.movie.exception.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
