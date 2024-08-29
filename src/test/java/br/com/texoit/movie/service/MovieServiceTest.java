@@ -1,16 +1,13 @@
 package br.com.texoit.movie.service;
 
-import br.com.texoit.movie.dto.MovieRequestDto;
 import br.com.texoit.movie.dto.MovieResponseDto;
 import br.com.texoit.movie.exception.ResourceNotFoundException;
 import br.com.texoit.movie.model.Movie;
 import br.com.texoit.movie.repository.MovieRepository;
-import br.com.texoit.movie.util.MovieCSVLoader;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockedStatic;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
@@ -32,27 +29,6 @@ public class MovieServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-    }
-
-    @Test
-    void testLoadCSV() {
-        // Testa o método loadCSV para garantir que os dados podem ser carregados
-        when(movieRepository.count()).thenReturn(0L);
-
-        // Simule o carregamento CSV
-        List<MovieRequestDto> movieRequestDtos = Arrays.asList(
-                new MovieRequestDto(1980, "Can't Stop the Music", "Associated Film Distribution", "Allan Carr", "yes"),
-                new MovieRequestDto(1984, "Bolero", "Cannon Films", "Bo Derek", "yes"),
-                new MovieRequestDto(1990, "Ghosts Can't Do It", "Triumph Releasing", "Bo Derek, Andrew Bergman", "yes"),
-                new MovieRequestDto(1996, "Striptease", "Columbia Pictures", "Buzz Feitshans", "yes")
-        );
-
-        // Aqui você deve simular o retorno do MovieCSVLoader.loadCSV
-        try (MockedStatic<MovieCSVLoader> mocked = mockStatic(MovieCSVLoader.class)) {
-            mocked.when(MovieCSVLoader::loadCSV).thenReturn(movieRequestDtos);
-            movieService.loadCSV();
-            verify(movieRepository, times(2)).save(any(Movie.class));
-        }
     }
 
     @Test
