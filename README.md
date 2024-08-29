@@ -1,4 +1,4 @@
-# Texo-it-worstmovie-api
+# Texo-it-movie-api
 
 ## Como rodar o projeto
 

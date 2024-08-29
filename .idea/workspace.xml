@@ -26,8 +26,6 @@
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../teste-pratico/mini-autorizador/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/texoit/movie/service/MovieServiceTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/.idea/jarRepositories.xml" afterDir="false" />
@@ -48,15 +46,7 @@
       <change afterPath="$PROJECT_DIR$/../vendas/src/main/java/io/github/gelsongodoi/repository/Customers.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../vendas/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/controller/MovieController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/AwardIntervalDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ErrorField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ErrorField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/GlobalHandlerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/GlobalHandlerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/NonExistentRecordException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/exception/ResponseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,41 +84,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.TexoItMovieApplication.executor": "Run",
-    "Application.TexoItWorstMovieApplication.executor": "Run",
-    "Docker.template.yaml: Compose Deployment.executor": "Run",
-    "JUnit.MovieServiceTest.executor": "Run",
-    "JUnit.MovieServiceTest.getProducersMaxAndMinInterval.executor": "Run",
-    "JUnit.MovieServiceTest.testFindAllWhenEmpty.executor": "Run",
-    "JUnit.MovieServiceTest.testFindAllWhenNotEmpty.executor": "Run",
-    "JUnit.MovieServiceTest.testFindByYearWithExistingMovies.executor": "Run",
-    "JUnit.MovieServiceTest.testFindByYearWithNoMovies.executor": "Run",
-    "JUnit.MovieServiceTest.testGetProducersInterval.executor": "Run",
-    "JUnit.MovieServiceTest.testGetProducersInterval_MultipleProducers.executor": "Run",
-    "JUnit.MovieServiceTest.testGetProducersInterval_SingleProducerMultipleWins.executor": "Debug",
-    "JUnit.MovieServiceTest.testLoadCSV.executor": "Run",
-    "JUnit.WorstMovie.executor": "Coverage",
-    "JUnit.WorstMovieControllerTest.executor": "Coverage",
-    "JUnit.WorstMovieControllerTest.returnWorstMovie.executor": "Run",
-    "JUnit.WorstMovieTest.executor": "Coverage",
-    "JUnit.WorstMovieTest.registerMovie.executor": "Coverage",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.TexoItMovieApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TexoItWorstMovieApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.template.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.getProducersMaxAndMinInterval.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testFindAllWhenEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testFindAllWhenNotEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testFindByYearWithExistingMovies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testFindByYearWithNoMovies.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testGetProducersInterval.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testGetProducersInterval_MultipleProducers.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MovieServiceTest.testGetProducersInterval_SingleProducerMultipleWins.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.MovieServiceTest.testLoadCSV.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorstMovie.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.WorstMovieControllerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.WorstMovieControllerTest.returnWorstMovie.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WorstMovieTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.WorstMovieTest.registerMovie.executor&quot;: &quot;Coverage&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.debugger.capture&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.texoit.movie.exception" />
@@ -151,7 +141,7 @@
       <recent name="br.com.texoit.movie.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MovieServiceTest.testGetProducersInterval">
+  <component name="RunManager" selected="Application.TexoItMovieApplication">
     <configuration name="TexoItMovieApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.TexoItMovieApplication" />
       <module name="texo-it-movie-api" />
@@ -340,7 +330,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724876411279</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ajuste na regra dos vencedores">
+      <option name="closed" value="true" />
+      <created>1724887632143</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1724887632143</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ajuste na regra dos vencedores">
+      <option name="closed" value="true" />
+      <created>1724887661357</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724887661357</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ajuste na regra dos vencedores">
+      <option name="closed" value="true" />
+      <created>1724887685087</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724887685087</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
