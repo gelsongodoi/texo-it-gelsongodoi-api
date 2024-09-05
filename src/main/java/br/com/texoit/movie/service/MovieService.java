@@ -4,10 +4,12 @@ import br.com.texoit.movie.dto.*;
 import br.com.texoit.movie.exception.ResourceNotFoundException;
 import br.com.texoit.movie.model.Movie;
 import br.com.texoit.movie.repository.MovieRepository;
-import br.com.texoit.movie.util.MovieCSVLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 @Service
@@ -16,27 +18,13 @@ public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
 
-    public void loadCSV(){
-        List<MovieRequestDto> movieRequestDtos = MovieCSVLoader.loadCSV();
-        for (MovieRequestDto movieRequestDto : movieRequestDtos) {
-            Movie movie = new Movie(movieRequestDto.getYearMovie(), movieRequestDto.getTitle(), movieRequestDto.getStudio(), movieRequestDto.getProducer(), movieRequestDto.getWinner());
-            movieRepository.save(movie);
-        }
-    }
-
     public List<MovieResponseDto> findAll() {
-        if (movieRepository.count() == 0){
-            loadCSV();
-        }
         List<Movie> movies = movieRepository.findAll();
         List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
         return movieResponseDtos;
     }
 
-    public List<MovieResponseDto> findByYear(int year) {
-        if (movieRepository.count() == 0){
-            loadCSV();
-        }
+    public List<MovieResponseDto> findByYear(String year) {
         List<Movie> movies = movieRepository.findByYearMovieAndWinner(year, "yes");
         if (movies.isEmpty())
             throw new ResourceNotFoundException("Não há dados a exibir com esta informação: ano " + year);
@@ -46,29 +34,24 @@ public class MovieService {
     }
 
     public List<MovieResponseDto> findByWinner(String winner) {
-        if (movieRepository.count() == 0){
-            loadCSV();
-        }
         List<Movie> movies = movieRepository.findByWinner(winner);
         List<MovieResponseDto> movieResponseDtos = MovieResponseDto.converterList(movies);
         return movieResponseDtos;
     }
 
     public Map<String, List<Map<String, Object>>> getProducersInterval() {
-        if (movieRepository.count() == 0){
-            loadCSV();
-        }
         List<Movie> movies = movieRepository.findByWinner("yes");
         Map<String, List<Integer>> producerYearsMap = new HashMap<>();
 
         // Organizar anos por produtor (separando por ',' e 'and')
         for (Movie movie : movies) {
             String[] producers = movie.getProducer().split(" and |, and |, ");
+            int year = Integer.parseInt(movie.getYearMovie());
             for (String producer : producers) {
                 producer = producer.trim();
                 producerYearsMap
                         .computeIfAbsent(producer, k -> new ArrayList<>())
-                        .add(movie.getYearMovie());
+                        .add(year);
             }
         }
 
@@ -143,6 +126,38 @@ public class MovieService {
         producerMap.put("previousWin", previousWin);
         producerMap.put("followingWin", followingWin);
         return producerMap;
+    }
+
+    public void loadMoviesFromCSV(String filePath) {
+
+        String line;
+        int i = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            while ((line = br.readLine()) != null) {
+                String[] fields = line.split(";");
+                if(i == 0) {
+                    i++;
+                    continue;
+                }
+                    Movie movie = new Movie();
+                    if (fields.length == 4) {
+                        movie.setYearMovie(fields[0]); // Ano
+                        movie.setTitle(fields[1]); // Título
+                        movie.setStudio(fields[2]); // Estúdio
+                        movie.setProducer(fields[3]); // Produtor
+                    }
+                    if (fields.length == 5){
+                        movie.setYearMovie(fields[0]); // Ano
+                        movie.setTitle(fields[1]); // Título
+                        movie.setStudio(fields[2]); // Estúdio
+                        movie.setProducer(fields[3]); // Produtor
+                        movie.setWinner(fields[4]); // Vencedor
+                    }
+                    movieRepository.save(movie);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

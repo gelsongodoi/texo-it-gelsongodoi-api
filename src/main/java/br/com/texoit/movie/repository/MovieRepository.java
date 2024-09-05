@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long>{
 
-    List<Movie> findByYearMovieAndWinner(int year, String winner);
+    List<Movie> findByYearMovieAndWinner(String year, String winner);
 
     List<Movie> findByWinner(String winner);
 }

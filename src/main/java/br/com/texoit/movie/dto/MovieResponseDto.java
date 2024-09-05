@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 public class MovieResponseDto {
 
-    private int year;
+    private String year;
 
     private String title;
 

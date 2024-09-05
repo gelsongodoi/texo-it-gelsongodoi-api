@@ -38,7 +38,7 @@ public class MovieController {
 
     @GetMapping("/findByYear")
     @Operation(summary = "Mostra os vencedores, passando como parâmetro o ano do filme")
-    public ResponseEntity<List<MovieResponseDto>> findByYear(@RequestParam int year) {
+    public ResponseEntity<List<MovieResponseDto>> findByYear(@RequestParam String year) {
         List<MovieResponseDto> movies = movieService.findByYear(year);
         return ResponseEntity.ok(movies);
     }

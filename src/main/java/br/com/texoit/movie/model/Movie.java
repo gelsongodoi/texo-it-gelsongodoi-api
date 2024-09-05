@@ -12,22 +12,28 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "id")
+    private Long id;
 
-    private int yearMovie;
+    @Column(name = "year")
+    private String yearMovie;
 
+    @Column(name = "title")
     private String title;
 
+    @Column(name = "studio")
     private String studio;
 
+    @Column(name = "producer")
     private String producer;
 
+    @Column(name = "winner")
     private String winner;
 
     public Movie() {
     }
 
-    public Movie(int id, int yearMovie, String title, String studio, String producer, String winner) {
+    public Movie(Long id, String yearMovie, String title, String studio, String producer, String winner) {
         this.id = id;
         this.yearMovie = yearMovie;
         this.title = title;
@@ -36,7 +42,7 @@ public class Movie {
         this.winner = winner;
     }
 
-    public Movie(int yearMovie, String title, String studio, String producer, String winner) {
+    public Movie(String yearMovie, String title, String studio, String producer, String winner) {
         this.yearMovie = yearMovie;
         this.title = title;
         this.studio = studio;
@@ -44,7 +50,7 @@ public class Movie {
         this.winner = winner;
     }
 
-    public Movie(int yearMovie, String title, String studio, String producer) {
+    public Movie(String yearMovie, String title, String studio, String producer) {
         this.yearMovie = yearMovie;
         this.title = title;
         this.studio = studio;
