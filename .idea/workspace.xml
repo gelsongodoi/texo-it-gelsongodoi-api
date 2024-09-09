@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="ajuste na regra dos vencedores">
+    <list default="true" id="a14eb276-8cbe-415d-975a-7280d06d8fc6" name="Changes" comment="ajuste para carregar o arquivo automaticamente ao subir a aplicação">
       <change afterPath="$PROJECT_DIR$/../EcommerceSpringBoot/.idea/aws.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../desafio-bluesoft-felipe/.idea/aws.xml" afterDir="false" />
@@ -48,7 +48,10 @@
       <change afterPath="$PROJECT_DIR$/../vendas/src/main/resources/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/dto/MovieRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/texoit/movie/util/MovieCSVLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/br/com/texoit/movie/service/MovieServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/br/com/texoit/movie/service/MovieServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,41 +88,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.TexoItMovieApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TexoItWorstMovieApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.template.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.getProducersMaxAndMinInterval.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testFindAllWhenEmpty.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testFindAllWhenNotEmpty.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testFindByYearWithExistingMovies.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testFindByYearWithNoMovies.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testGetProducersInterval.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testGetProducersInterval_MultipleProducers.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MovieServiceTest.testGetProducersInterval_SingleProducerMultipleWins.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.MovieServiceTest.testLoadCSV.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WorstMovie.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.WorstMovieControllerTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.WorstMovieControllerTest.returnWorstMovie.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WorstMovieTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.WorstMovieTest.registerMovie.executor&quot;: &quot;Coverage&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.debugger.capture&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.TexoItMovieApplication.executor": "Run",
+    "Application.TexoItWorstMovieApplication.executor": "Run",
+    "Docker.template.yaml: Compose Deployment.executor": "Run",
+    "JUnit.MovieServiceTest.executor": "Run",
+    "JUnit.MovieServiceTest.getProducersMaxAndMinInterval.executor": "Run",
+    "JUnit.MovieServiceTest.testFindAllWhenEmpty.executor": "Run",
+    "JUnit.MovieServiceTest.testFindAllWhenNotEmpty.executor": "Run",
+    "JUnit.MovieServiceTest.testFindByYearWithExistingMovies.executor": "Run",
+    "JUnit.MovieServiceTest.testFindByYearWithNoMovies.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval_MultipleProducers.executor": "Run",
+    "JUnit.MovieServiceTest.testGetProducersInterval_SingleProducerMultipleWins.executor": "Debug",
+    "JUnit.MovieServiceTest.testLoadCSV.executor": "Run",
+    "JUnit.WorstMovie.executor": "Coverage",
+    "JUnit.WorstMovieControllerTest.executor": "Coverage",
+    "JUnit.WorstMovieControllerTest.returnWorstMovie.executor": "Run",
+    "JUnit.WorstMovieTest.executor": "Coverage",
+    "JUnit.WorstMovieTest.registerMovie.executor": "Coverage",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/TMP/Projetos/texo-it-gelsongodoi-api/src/main/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.idesettings.debugger.capture"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.texoit.movie.exception" />
@@ -143,7 +146,7 @@
       <recent name="br.com.texoit.movie.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TexoItMovieApplication">
+  <component name="RunManager" selected="JUnit.MovieServiceTest">
     <configuration name="TexoItMovieApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="br.com.texoit.movie.TexoItMovieApplication" />
       <module name="texo-it-movie-api" />
@@ -268,10 +271,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MovieServiceTest" />
         <item itemvalue="JUnit.MovieServiceTest.testGetProducersInterval" />
         <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenNotEmpty" />
         <item itemvalue="JUnit.MovieServiceTest.testFindAllWhenEmpty" />
-        <item itemvalue="JUnit.MovieServiceTest" />
         <item itemvalue="JUnit.MovieServiceTest.testFindByYearWithNoMovies" />
       </list>
     </recent_temporary>
@@ -364,8 +367,27 @@
       <option name="project" value="LOCAL" />
       <updated>1724902467543</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ajuste no arquivo de propriedades">
+      <option name="closed" value="true" />
+      <created>1724906711729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1724906711729</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ajuste para carregar o arquivo automaticamente ao subir a aplicação">
+      <option name="closed" value="true" />
+      <created>1725539945866</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725539945866</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -382,7 +404,9 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="ajuste da url" />
     <MESSAGE value="ajuste na regra dos vencedores" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajuste na regra dos vencedores" />
+    <MESSAGE value="ajuste no arquivo de propriedades" />
+    <MESSAGE value="ajuste para carregar o arquivo automaticamente ao subir a aplicação" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste para carregar o arquivo automaticamente ao subir a aplicação" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

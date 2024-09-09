@@ -57,6 +57,7 @@ public class MovieService {
 
         List<Map<String, Object>> minProducers = new ArrayList<>();
         List<Map<String, Object>> maxProducers = new ArrayList<>();
+        Set<String> addedProducers = new HashSet<>(); // Para evitar duplicatas
 
         int minInterval = Integer.MAX_VALUE;
         int maxInterval = 0;
@@ -96,21 +97,35 @@ public class MovieService {
             // Atualizar a lista de produtores com a lógica mínima
             if (producerMinInterval < minInterval) {
                 minInterval = producerMinInterval;
-                minProducers.clear();
+                //minProducers.clear(); // Limpa a lista antes de adicionar novos
                 minProducers.add(createProducerMap(producer, producerMinInterval, firstWinYear, firstWinYear + producerMinInterval));
-            } else if (producerMinInterval == minInterval) {
+                addedProducers.add(producer); // Marcar como adicionado
+            } else if (producerMinInterval == minInterval && minProducers.size() < 2) {
                 minProducers.add(createProducerMap(producer, producerMinInterval, firstWinYear, firstWinYear + producerMinInterval));
+                addedProducers.add(producer); // Marcar como adicionado
             }
 
             // Atualizar a lista de produtores com a lógica máxima
             if (producerMaxInterval > maxInterval) {
                 maxInterval = producerMaxInterval;
-                maxProducers.clear();
-                maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
-            } else if (producerMaxInterval == maxInterval) {
-                maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
+                //maxProducers.clear(); // Limpa a lista antes de adicionar novos
+                // Antes de adicionar, verifique se o produtor já foi adicionado nos mínimos
+                if (!addedProducers.contains(producer)) {
+                    maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
+                    addedProducers.add(producer); // Marcar como adicionado
+                }
+            } else if (producerMaxInterval == maxInterval && maxProducers.size() < 2) {
+                // Adiciona apenas se não foi adicionado nos mínimos
+                if (!addedProducers.contains(producer)) {
+                    maxProducers.add(createProducerMap(producer, producerMaxInterval, years.get(0), years.get(0) + producerMaxInterval));
+                    addedProducers.add(producer); // Marcar como adicionado
+                }
             }
         }
+
+        // Ordenar os resultados por intervalo
+        minProducers.sort(Comparator.comparingInt(entry -> (int) entry.get("interval")));
+        maxProducers.sort(Comparator.comparingInt(entry -> (int) entry.get("interval")));
 
         // Montar o resultado final
         Map<String, List<Map<String, Object>>> result = new HashMap<>();
@@ -120,7 +135,7 @@ public class MovieService {
     }
 
     private Map<String, Object> createProducerMap(String producer, int interval, int previousWin, int followingWin) {
-        Map<String, Object> producerMap = new HashMap<>();
+        Map<String, Object> producerMap = new LinkedHashMap<>(); // LinkedHashMap para manter a ordem de inserção
         producerMap.put("producer", producer);
         producerMap.put("interval", interval);
         producerMap.put("previousWin", previousWin);
